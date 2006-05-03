@@ -1,0 +1,16 @@
+---
+name: Catalyst-Plugin-Snippets
+version: 0.01
+author: ~
+abstract: Make sharing data with clients easy
+license: perl
+requires:
+  Catalyst: 5.691
+  perl: 5.8.1
+recommends:
+  JSON::Syck: ~
+provides:
+  Catalyst::Plugin::Snippets:
+    file: lib/Catalyst/Plugin/Snippets.pm
+    version: 0.01
+generated_by: Module::Build version 0.2611
