@@ -4,14 +4,15 @@ package Catalyst::Plugin::Snippets;
 
 use strict;
 use warnings;
+use MRO::Compat;
 
 BEGIN { eval { require JSON::Syck } }
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub setup {
     my $app = shift;
-    my $ret = $app->NEXT::setup(@_);
+    my $ret = $app->maybe::next::method(@_);
 
     %{ $app->config->{snippets} } = (
         %{ $app->config->{snippets} || {} },

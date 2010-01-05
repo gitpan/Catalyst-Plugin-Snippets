@@ -1,0 +1,9 @@
+0.02 2010-01-04
+  - Switch to Module::Install
+  - Switch from NEXT to MRO::Compat
+  - Add repository metadata
+  - Fix undeclared dependency on Test::use::ok by removing it.
+  - Fix undeclared dependency on Test::MockObject.
+
+0.01
+  - Initial version

@@ -5,12 +5,10 @@ use warnings;
 
 use Test::More 'no_plan';
 
-use ok "Catalyst::Plugin::Snippets";
+use_ok "Catalyst::Plugin::Snippets";
 
 use Test::MockObject;
 use Test::MockObject::Extends;
-
-use NEXT;
 
 my $req    = Test::MockObject->new;
 my $res    = Test::MockObject->new;
