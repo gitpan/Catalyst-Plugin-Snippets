@@ -8,19 +8,19 @@ use MRO::Compat;
 
 BEGIN { eval { require JSON::Syck } }
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 sub setup {
     my $app = shift;
     my $ret = $app->maybe::next::method(@_);
 
     %{ $app->config->{snippets} } = (
-        %{ $app->config->{snippets} || {} },
         format            => "plain",
         allow_refs        => 1,
         use_session_id    => 0,
         json_content_type => "application/javascript+json",
         content_type      => "text/plain",
+        %{ $app->config->{snippets} || {} },
     );
 
     $ret;
